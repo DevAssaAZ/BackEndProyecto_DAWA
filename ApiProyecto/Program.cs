@@ -17,7 +17,7 @@ builder.Services.AddDbContext<PostVentaContext>(
 builder.Services.AddCors(options =>
 {
     options.AddPolicy("AllowAngularApp",
-        builder => builder.WithOrigins("http://localhost:4200") // URL de tu proyecto Angular
+        builder => builder.WithOrigins("http://localhost:54081") // URL de tu proyecto Angular
         .AllowAnyMethod() //Permite cualquier metodo HTTP(GET,POS, etc)
         .AllowAnyHeader()); //Permite cualquier encabezado
 });
