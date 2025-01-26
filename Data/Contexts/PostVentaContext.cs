@@ -46,7 +46,7 @@ public partial class PostVentaContext : DbContext
 
         modelBuilder.Entity<Devolucione>(entity =>
         {
-            entity.HasKey(e => e.id).HasName("PK__Devoluci__3213E83FC74680F7");
+            entity.HasKey(e => e.id).HasName("PK__Devoluci__3213E83F644D6EEF");
 
             entity.Property(e => e.id).ValueGeneratedNever();
             entity.Property(e => e.cliente).HasMaxLength(255);

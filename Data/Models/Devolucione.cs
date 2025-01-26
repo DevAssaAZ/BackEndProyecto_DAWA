@@ -15,7 +15,7 @@ public partial class Devolucione
 
     public string? descripcion { get; set; }
 
-    public DateOnly? fechaSolicitud { get; set; }
+    public DateTime? fechaSolicitud { get; set; }
 
     public string? estado { get; set; }
 
