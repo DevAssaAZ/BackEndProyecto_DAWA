@@ -5,7 +5,7 @@ namespace Data.Models;
 
 public partial class Producto
 {
-    public string id { get; set; } = null!;
+    public int id { get; set; } 
 
     public string? nombre { get; set; }
 

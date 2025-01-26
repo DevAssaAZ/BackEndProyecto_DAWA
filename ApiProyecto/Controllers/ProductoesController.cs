@@ -30,7 +30,7 @@ namespace ApiProyecto.Controllers
 
         // GET: api/Productoes/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Producto>> GetProducto(string id)
+        public async Task<ActionResult<Producto>> GetProducto(int id)
         {
             var producto = await _context.Productos.FindAsync(id);
 
@@ -45,7 +45,7 @@ namespace ApiProyecto.Controllers
         // PUT: api/Productoes/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutProducto(string id, Producto producto)
+        public async Task<IActionResult> PutProducto(int id, Producto producto)
         {
             if (id != producto.id)
             {
@@ -100,7 +100,7 @@ namespace ApiProyecto.Controllers
 
         // DELETE: api/Productoes/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteProducto(string id)
+        public async Task<IActionResult> DeleteProducto(int id)
         {
             var producto = await _context.Productos.FindAsync(id);
             if (producto == null)
@@ -114,7 +114,7 @@ namespace ApiProyecto.Controllers
             return NoContent();
         }
 
-        private bool ProductoExists(string id)
+        private bool ProductoExists(int id)
         {
             return _context.Productos.Any(e => e.id == id);
         }

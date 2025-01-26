@@ -30,7 +30,7 @@ namespace ApiProyecto.Controllers
 
         // GET: api/Garantias/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Garantia>> GetGarantia(string id)
+        public async Task<ActionResult<Garantia>> GetGarantia(int id)
         {
             var garantia = await _context.Garantias.FindAsync(id);
 
@@ -45,7 +45,7 @@ namespace ApiProyecto.Controllers
         // PUT: api/Garantias/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutGarantia(string id, Garantia garantia)
+        public async Task<IActionResult> PutGarantia(int id, Garantia garantia)
         {
             if (id != garantia.id)
             {
@@ -100,7 +100,7 @@ namespace ApiProyecto.Controllers
 
         // DELETE: api/Garantias/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteGarantia(string id)
+        public async Task<IActionResult> DeleteGarantia(int id)
         {
             var garantia = await _context.Garantias.FindAsync(id);
             if (garantia == null)
@@ -114,7 +114,7 @@ namespace ApiProyecto.Controllers
             return NoContent();
         }
 
-        private bool GarantiaExists(string id)
+        private bool GarantiaExists(int id)
         {
             return _context.Garantias.Any(e => e.id == id);
         }

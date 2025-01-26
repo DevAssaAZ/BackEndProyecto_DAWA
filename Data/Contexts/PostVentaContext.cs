@@ -58,7 +58,7 @@ public partial class PostVentaContext : DbContext
         {
             entity.HasKey(e => e.id).HasName("PK__Garantia__3213E83FB5C84D26");
 
-            entity.Property(e => e.id).HasMaxLength(50);
+            entity.Property(e => e.id).ValueGeneratedNever();
             entity.Property(e => e.estado).HasMaxLength(50);
             entity.Property(e => e.fechaCompra).HasColumnType("datetime");
             entity.Property(e => e.fechaRegistro).HasColumnType("datetime");
@@ -76,7 +76,7 @@ public partial class PostVentaContext : DbContext
         {
             entity.HasKey(e => e.id).HasName("PK__Producto__3213E83F51EB07D7");
 
-            entity.Property(e => e.id).HasMaxLength(50);
+            entity.Property(e => e.id).ValueGeneratedNever();
             entity.Property(e => e.categoria).HasMaxLength(255);
             entity.Property(e => e.fechaAgregado).HasColumnType("datetime");
             entity.Property(e => e.nombre).HasMaxLength(255);

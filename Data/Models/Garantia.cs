@@ -5,7 +5,7 @@ namespace Data.Models;
 
 public partial class Garantia
 {
-    public string id { get; set; } = null!;
+    public int id { get; set; } 
 
     public int cliente_id { get; set; }
 
@@ -23,5 +23,5 @@ public partial class Garantia
 
     public DateTime? ultimaActualizacion { get; set; }
 
-    public virtual Cliente cliente { get; set; } = null!;
+    public virtual Cliente? cliente { get; set; }
 }
