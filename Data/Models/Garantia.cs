@@ -23,5 +23,5 @@ public partial class Garantia
 
     public DateTime? ultimaActualizacion { get; set; }
 
-    public virtual Cliente cliente { get; set; } = null!;
+    public virtual Cliente? cliente { get; set; }
 }
