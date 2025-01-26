@@ -19,7 +19,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowAngularApp",
         builder => builder.WithOrigins("http://localhost:4200") // URL de tu proyecto Angular
         .AllowAnyMethod() //Permite cualquier metodo HTTP(GET,POS, etc)
-        .AllowAnyHeader()); //Permite cualquier encabezado
+        .AllowAnyHeader()); //Permite cualquier encabezadod
 });
 
 var app = builder.Build();

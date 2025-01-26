@@ -15,11 +15,11 @@ public partial class Cliente
 
     public string? direccion { get; set; }
 
-    public DateOnly? fechaRegistro { get; set; }
+    public DateTime? fechaRegistro { get; set; }
 
     public string? estado { get; set; }
 
-    public virtual ICollection<Garantia> Garantia { get; set; } = new List<Garantia>();
+    public virtual ICollection<Garantia>? Garantia { get; set; }
 
-    public virtual ICollection<Soporte> Soportes { get; set; } = new List<Soporte>();
+    public virtual ICollection<Soporte>? Soportes { get; set; }
 }
