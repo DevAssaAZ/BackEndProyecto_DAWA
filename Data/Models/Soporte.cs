@@ -13,7 +13,7 @@ public partial class Soporte
 
     public string? producto { get; set; }
 
-    public DateOnly? fecha_solicitud { get; set; }
+    public DateTime? fecha_solicitud { get; set; }
 
     public string? estado { get; set; }
 
