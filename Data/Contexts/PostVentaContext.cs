@@ -36,7 +36,7 @@ public partial class PostVentaContext : DbContext
         {
             entity.HasKey(e => e.id).HasName("PK__Clientes__3213E83FDF7D5C6D");
 
-            entity.Property(e => e.id).ValueGeneratedNever();
+            entity.Property(e => e.id).ValueGeneratedOnAdd(); // Permite la generación automática del ID
             entity.Property(e => e.direccion).HasMaxLength(255);
             entity.Property(e => e.email).HasMaxLength(255);
             entity.Property(e => e.estado).HasMaxLength(20);
@@ -48,7 +48,7 @@ public partial class PostVentaContext : DbContext
         {
             entity.HasKey(e => e.id).HasName("PK__Devoluci__3213E83F644D6EEF");
 
-            entity.Property(e => e.id).ValueGeneratedNever();
+            entity.Property(e => e.id).ValueGeneratedOnAdd(); // Permite la generación automática del ID
             entity.Property(e => e.cliente).HasMaxLength(255);
             entity.Property(e => e.estado).HasMaxLength(50);
             entity.Property(e => e.producto).HasMaxLength(255);
@@ -58,7 +58,7 @@ public partial class PostVentaContext : DbContext
         {
             entity.HasKey(e => e.id).HasName("PK__Garantia__3213E83FB5C84D26");
 
-            entity.Property(e => e.id).ValueGeneratedNever();
+            entity.Property(e => e.id).ValueGeneratedOnAdd(); // Permite la generación automática del ID
             entity.Property(e => e.estado).HasMaxLength(50);
             entity.Property(e => e.fechaCompra).HasColumnType("datetime");
             entity.Property(e => e.fechaRegistro).HasColumnType("datetime");
@@ -76,7 +76,7 @@ public partial class PostVentaContext : DbContext
         {
             entity.HasKey(e => e.id).HasName("PK__Producto__3213E83F51EB07D7");
 
-            entity.Property(e => e.id).ValueGeneratedNever();
+            entity.Property(e => e.id).ValueGeneratedOnAdd(); // Permite la generación automática del ID
             entity.Property(e => e.categoria).HasMaxLength(255);
             entity.Property(e => e.fechaAgregado).HasColumnType("datetime");
             entity.Property(e => e.nombre).HasMaxLength(255);

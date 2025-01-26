@@ -1,11 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace Data.Models;
 
 public partial class Garantia
 {
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // Configura el `id` como auto-generado
     public int id { get; set; } 
+
+
 
     public int cliente_id { get; set; }
 

@@ -81,11 +81,12 @@ namespace ApiProyecto.Controllers
             _context.Productos.Add(producto);
             try
             {
-                await _context.SaveChangesAsync();
+                _context.Productos.Add(producto); // Añade el producto sin modificar el ID
+                await _context.SaveChangesAsync(); // Guarda los cambios en la base de dato
             }
             catch (DbUpdateException)
             {
-                if (ProductoExists(producto.id))
+                if (producto.id != 0 && ProductoExists(producto.id))
                 {
                     return Conflict();
                 }
@@ -96,6 +97,11 @@ namespace ApiProyecto.Controllers
             }
 
             return CreatedAtAction("GetProducto", new { id = producto.id }, producto);
+        }
+
+        private bool ProductoExists(int? id)
+        {
+            throw new NotImplementedException();
         }
 
         // DELETE: api/Productoes/5

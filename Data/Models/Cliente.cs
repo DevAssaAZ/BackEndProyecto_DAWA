@@ -1,11 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Data.Models;
 
 public partial class Cliente
 {
+    [Key]
+    [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // Configura el `id` como auto-generado
     public int id { get; set; }
+
+
 
     public string nombre { get; set; } = null!;
 

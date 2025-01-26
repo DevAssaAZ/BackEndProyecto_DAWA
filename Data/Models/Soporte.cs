@@ -5,6 +5,7 @@ namespace Data.Models;
 
 public partial class Soporte
 {
+
     public int id { get; set; }
 
     public int cliente_id { get; set; }
@@ -17,5 +18,5 @@ public partial class Soporte
 
     public string? estado { get; set; }
 
-    public virtual Cliente cliente { get; set; } = null!;
+    public virtual Cliente? cliente { get; set; }
 }
