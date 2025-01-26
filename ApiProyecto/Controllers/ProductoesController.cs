@@ -100,7 +100,7 @@ namespace ApiProyecto.Controllers
 
         // DELETE: api/Productoes/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteProducto(string id)
+        public async Task<IActionResult> DeleteProducto(int id)
         {
             var producto = await _context.Productos.FindAsync(id);
             if (producto == null)

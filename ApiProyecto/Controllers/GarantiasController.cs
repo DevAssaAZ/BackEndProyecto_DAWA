@@ -100,7 +100,7 @@ namespace ApiProyecto.Controllers
 
         // DELETE: api/Garantias/5
         [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteGarantia(string id)
+        public async Task<IActionResult> DeleteGarantia(int id)
         {
             var garantia = await _context.Garantias.FindAsync(id);
             if (garantia == null)
