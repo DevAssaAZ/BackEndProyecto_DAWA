@@ -5,7 +5,7 @@ namespace Data.Models;
 
 public partial class Garantia
 {
-    public string id { get; set; } = null!;
+    public int id { get; set; } 
 
     public int cliente_id { get; set; }
 
